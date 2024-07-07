@@ -1,0 +1,120 @@
+(
+  footprint
+  "mta100_01x2_P2.54_640455-2"
+  (version 20240108)
+  (generator mta100.py)
+  (descr "MTA-100 polarized headers, right angle, 2 positions. Part code 640455-2")
+  (tags "MTA-100 2.54mm header single row polarized")
+  (attr through_hole)
+  (zone_connect 0)
+  (
+    fp_line
+    (start -1.27 2.985)
+    (end 2.81 2.985)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "718982a0-9014-4905-849e-9386b58eaf87")
+  )
+  (
+    fp_line
+    (start 2.81 2.985)
+    (end 3.81 3.985)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "3fe4a4ea-b486-437c-8dbc-e0e2dc57321b")
+  )
+  (
+    fp_line
+    (start 3.81 3.985)
+    (end 3.81 9.334999999999999)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "91c81c58-7ce4-4a76-86f3-0ff23c80fd3f")
+  )
+  (
+    fp_line
+    (start 3.81 9.334999999999999)
+    (end -1.27 9.334999999999999)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "1ec9720c-4a39-4de8-b845-b637f8a86c2d")
+  )
+  (
+    fp_line
+    (start -1.27 9.334999999999999)
+    (end -1.27 2.985)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "0242bf3b-59d7-4900-aa04-2e1cd00b91a0")
+  )
+  (
+    fp_rect
+    (start -1.77 1.2149999999999994)
+    (end 4.3100000000000005 10.47)
+    (
+      stroke
+      (width 0.05)
+      (type default)
+    )
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "44c28f64-57e0-4c48-8b62-7658a91c83a3")
+  )
+  (
+    fp_rect
+    (start 0.0 2.885)
+    (end 2.54 4.795)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (fill solid)
+    (layer "F.SilkS")
+    (uuid "0537e588-e9cd-496d-8b8e-b9bfa3582bbf")
+  )
+  (
+    pad
+    "2"
+    thru_hole
+    circle
+    (at 0.0 0.0)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "b457ed2e-e89c-4c26-8926-f6592613faea")
+  )
+  (
+    pad
+    "1"
+    thru_hole
+    circle
+    (at 2.54 0.0)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "a5405ed4-bc70-4f13-a196-d592d21a0239")
+  )
+)

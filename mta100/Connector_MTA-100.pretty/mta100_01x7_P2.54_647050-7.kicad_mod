@@ -1,0 +1,228 @@
+(
+  footprint
+  "mta100_01x7_P2.54_647050-7"
+  (version 20240108)
+  (generator mta100.py)
+  (descr "MTA-100 Headers with retention peg, straight angle, 7 positions. Part code 647050-7")
+  (tags "MTA-100 2.54mm header single row")
+  (attr through_hole)
+  (zone_connect 0)
+  (
+    fp_line
+    (start 0 0)
+    (end 16.78 0)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "bfef8a35-35d2-4318-b11f-45a8eb59b91d")
+  )
+  (
+    fp_line
+    (start 16.78 0)
+    (end 17.78 1)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "e4df8626-4709-4cb8-b89a-fec5cd0d0fd5")
+  )
+  (
+    fp_line
+    (start 17.78 1)
+    (end 17.78 6.35)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "87d62d18-1644-45b3-8044-4c5044591fa3")
+  )
+  (
+    fp_line
+    (start 17.78 6.35)
+    (end 0 6.35)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "9857b1be-3f4b-479d-b992-1b304e3f2343")
+  )
+  (
+    fp_line
+    (start 0 6.35)
+    (end 0 0)
+    (
+      stroke
+      (width 0.1)
+      (type default)
+    )
+    (layer "F.Fab")
+    (uuid "ed098a0a-96c6-4686-9da4-5b3a23396ab2")
+  )
+  (
+    fp_rect
+    (start -0.5 -1.7700000000000005)
+    (end 18.28 7.485000000000001)
+    (
+      stroke
+      (width 0.05)
+      (type default)
+    )
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "5281e700-8656-44a8-bcd4-8a22e6864544")
+  )
+  (
+    fp_line
+    (start -0.1 -0.1)
+    (end 17.880000000000003 -0.1)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "4fb31e15-5296-405b-b84a-7f93777f7860")
+  )
+  (
+    fp_line
+    (start 17.880000000000003 -0.1)
+    (end 17.880000000000003 6.449999999999999)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "415d16d5-9a6d-487b-985b-0ff9a650c936")
+  )
+  (
+    fp_line
+    (start 17.880000000000003 6.449999999999999)
+    (end -0.1 6.449999999999999)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "17bf4a96-410b-4eee-b4a3-74df93ee9171")
+  )
+  (
+    fp_line
+    (start -0.1 6.449999999999999)
+    (end -0.1 -0.1)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "aacf2731-1324-43c4-a44b-0b3a6bf0d722")
+  )
+  (
+    fp_rect
+    (start 1.27 -0.1)
+    (end 16.51 1.8099999999999998)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (fill solid)
+    (layer "F.SilkS")
+    (uuid "d7729f77-65b7-4989-9a97-75f88d11056f")
+  )
+  (
+    pad
+    "7"
+    thru_hole
+    circle
+    (at 1.27 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "d06d8741-1ef6-4304-9a47-92e07745f31d")
+  )
+  (
+    pad
+    "6"
+    thru_hole
+    circle
+    (at 3.81 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "24402019-07ca-4383-b482-d02f85613698")
+  )
+  (
+    pad
+    "5"
+    thru_hole
+    circle
+    (at 6.35 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "2ff1a1e8-76cb-49fd-a92d-5c57ac5f0db4")
+  )
+  (
+    pad
+    "4"
+    thru_hole
+    circle
+    (at 8.89 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "c9d1d61e-25df-4fd0-84f5-3ddf2ac8e7f3")
+  )
+  (
+    pad
+    "3"
+    thru_hole
+    circle
+    (at 11.43 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "55a0c33f-b07d-4bcc-af11-cddd56f5b435")
+  )
+  (
+    pad
+    "2"
+    thru_hole
+    circle
+    (at 13.969999999999999 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "870c76c1-67fa-4ad5-a5ed-16913414adaf")
+  )
+  (
+    pad
+    "1"
+    thru_hole
+    circle
+    (at 16.51 2.87)
+    (size 1.85 1.85)
+    (drill 1.1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "3e7ecdcb-1f3b-4373-a5d0-e85c83cf9d4c")
+  )
+)

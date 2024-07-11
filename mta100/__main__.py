@@ -32,6 +32,7 @@ def make_647050(partno, positions, l, w=None, g=None):
     smargin = 0.1
     ph = 7.62
     moffset = (ph - 6.35)
+    sloped_margin = smargin * math.tan(math.pi / 16.0)
 
     shapes = make_connected_lines(
         'F.Fab', [
@@ -46,7 +47,8 @@ def make_647050(partno, positions, l, w=None, g=None):
     ] + make_connected_lines(
         'F.SilkS', [
             [-smargin, -smargin],
-            [l + smargin, -smargin],
+            [l - 1 + sloped_margin, -smargin],
+            [l + smargin, 1 - sloped_margin],
             [l + smargin, 6.35 + smargin],
             [-smargin, 6.35 + smargin],
         ], loop=True

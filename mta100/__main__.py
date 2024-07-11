@@ -6,23 +6,12 @@ from hashlib import sha256
 
 from sexpdata import Symbol, dumps
 
-from mta100.shape import Rect, PadRect, Line, Pad
+from mta100.shape import Rect, PadRect, Line, Pad, make_connected_lines, make_indexed_rect
 
 
 def make_uuid(name, index):
     h = hmac.new(name.encode(), str(index).encode(), digestmod=sha256)
     return str(uuid.UUID(bytes=h.digest()[:16], version=4))
-
-
-def make_indexed_rect(layer, start, end):
-    result = [
-        Line('F.Fab', [0, 0], [l - 1, 0], width=0.1),
-        Line('F.Fab', [l - 1, 0], [l, 1], width=0.1),
-        Line('F.Fab', [l, 1], [l, 6.35], width=0.1),
-        Line('F.Fab', [l, 6.35], [0, 6.35], width=0.1),
-        Line('F.Fab', [0, 6.35], [0, 0], width=0.1),
-    ]
-    return result
 
 
 def make_647050(partno, positions, l, w=None, g=None):
@@ -43,19 +32,26 @@ def make_647050(partno, positions, l, w=None, g=None):
     smargin = 0.1
     ph = 7.62
     moffset = (ph - 6.35)
-    shapes = [
-        Line('F.Fab', [0, 0], [l - 1, 0], width=0.1),
-        Line('F.Fab', [l - 1, 0], [l, 1], width=0.1),
-        Line('F.Fab', [l, 1], [l, 6.35], width=0.1),
-        Line('F.Fab', [l, 6.35], [0, 6.35], width=0.1),
-        Line('F.Fab', [0, 6.35], [0, 0], width=0.1),
-        Rect('F.CrtYd', [-cmargin, -moffset - cmargin], [l + cmargin, ph + cmargin - (moffset / 2)], width=0.05),
 
-        Line('F.SilkS', [-smargin, -smargin], [l + smargin, -smargin]),
-        Line('F.SilkS', [l + smargin, -smargin], [l + smargin, 6.35 + smargin]),
-        Line('F.SilkS', [l + smargin, 6.35 + smargin], [-smargin, 6.35 + smargin]),
-        Line('F.SilkS', [-smargin, 6.35 + smargin], [-smargin, -smargin]),
-    ]
+    shapes = make_connected_lines(
+        'F.Fab', [
+            [0, 0],
+            [l - 1, 0],
+            [l, 1],
+            [l, 6.35],
+            [0, 6.35],
+        ], width=0.1, loop=True
+    ) + [
+        Rect('F.CrtYd', [-cmargin, -moffset - cmargin], [l + cmargin, ph + cmargin - (moffset / 2)], width=0.05),
+    ] + make_connected_lines(
+        'F.SilkS', [
+            [-smargin, -smargin],
+            [l + smargin, -smargin],
+            [l + smargin, 6.35 + smargin],
+            [-smargin, 6.35 + smargin],
+        ], loop=True
+    )
+
 
     th = 2.87 - 0.64 - (0.64 / 2)
     if g is None:
@@ -100,20 +96,21 @@ def make_640455(partno, positions, l, w=None, g=None):
     moffset = (ph - 6.35)
     origin = [0, 0]
     sloped_margin = smargin * math.tan(math.pi / 16.0)
-    shapes = [
-        Line('F.Fab', [0, 0], [l - 1, 0], width=0.1),
-        Line('F.Fab', [l - 1, 0], [l, 1], width=0.1),
-        Line('F.Fab', [l, 1], [l, 6.35], width=0.1),
-        Line('F.Fab', [l, 6.35], [0, 6.35], width=0.1),
-        Line('F.Fab', [0, 6.35], [0, 0], width=0.1),
+    shapes = make_connected_lines(
+        'F.Fab', [
+            [0, 0], [l-1, 0], [l, 1], [l, 6.35], [0, 6.35]
+        ], width=0.1, loop=True
+    ) + [
         Rect('F.CrtYd', [-cmargin, -moffset - cmargin], [l + cmargin, ph + cmargin - (moffset / 2)], width=0.05),
-
-        Line('F.SilkS', [-smargin, -smargin], [l - 1 + sloped_margin, -smargin]),
-        Line('F.SilkS', [l - 1 + sloped_margin, -smargin], [l + smargin, 1 - sloped_margin]),
-        Line('F.SilkS', [l + smargin, 1 - sloped_margin], [l + smargin, 6.35 + smargin]),
-        Line('F.SilkS', [l + smargin, 6.35 + smargin], [-smargin, 6.35 + smargin]),
-        Line('F.SilkS', [-smargin, 6.35 + smargin], [-smargin, -smargin]),
-    ]
+    ] + make_connected_lines(
+        'F.SilkS', [
+            [-smargin, -smargin],
+            [l - 1 + sloped_margin, -smargin],
+            [l + smargin, 1 - sloped_margin],
+            [l + smargin, 6.35 + smargin],
+            [-smargin, 6.35 + smargin],
+        ], loop=True
+    )
 
     th = 2.87 - 0.64 - (0.64 / 2)
     if g is None:

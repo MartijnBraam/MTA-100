@@ -106,10 +106,11 @@ def make_640455(partno, positions, l, w=None, g=None):
         Line('F.Fab', [0, 6.35], [0, 0], width=0.1),
         Rect('F.CrtYd', [-cmargin, -moffset - cmargin], [l + cmargin, ph + cmargin - (moffset / 2)], width=0.05),
 
-        # Line('F.SilkS', [-smargin, -smargin], [l + smargin, -smargin]),
-        # Line('F.SilkS', [l + smargin, -smargin], [l + smargin, 6.35 + smargin]),
-        # Line('F.SilkS', [l + smargin, 6.35 + smargin], [-smargin, 6.35 + smargin]),
-        # Line('F.SilkS', [-smargin, 6.35 + smargin], [-smargin, -smargin]),
+        Line('F.SilkS', [-smargin, -smargin], [l + smargin - 1, -smargin]),
+        Line('F.SilkS', [l + smargin - 1, -smargin], [l + smargin, 1 - smargin]),
+        Line('F.SilkS', [l + smargin, 1 - smargin], [l + smargin, 6.35 + smargin]),
+        Line('F.SilkS', [l + smargin, 6.35 + smargin], [-smargin, 6.35 + smargin]),
+        Line('F.SilkS', [-smargin, 6.35 + smargin], [-smargin, -smargin]),
     ]
 
     th = 2.87 - 0.64 - (0.64 / 2)
@@ -127,6 +128,7 @@ def make_640455(partno, positions, l, w=None, g=None):
         shapes.append(Pad(pin, [left, -2.985], 1.85, 1.1))
         if pos == 0:
             origin = shapes[-1].center
+        shapes.append(Line('F.SilkS', [left, -1.8], [left, 0]))
 
     salt = 0
     for shape in shapes:

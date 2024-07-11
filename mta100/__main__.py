@@ -1,6 +1,7 @@
 import hmac
 import os
 import uuid
+import math
 from hashlib import sha256
 
 from sexpdata import Symbol, dumps
@@ -98,6 +99,7 @@ def make_640455(partno, positions, l, w=None, g=None):
     ph = 7.62
     moffset = (ph - 6.35)
     origin = [0, 0]
+    sloped_margin = smargin * math.tan(math.pi / 16.0)
     shapes = [
         Line('F.Fab', [0, 0], [l - 1, 0], width=0.1),
         Line('F.Fab', [l - 1, 0], [l, 1], width=0.1),
@@ -106,9 +108,9 @@ def make_640455(partno, positions, l, w=None, g=None):
         Line('F.Fab', [0, 6.35], [0, 0], width=0.1),
         Rect('F.CrtYd', [-cmargin, -moffset - cmargin], [l + cmargin, ph + cmargin - (moffset / 2)], width=0.05),
 
-        Line('F.SilkS', [-smargin, -smargin], [l + smargin - 1, -smargin]),
-        Line('F.SilkS', [l + smargin - 1, -smargin], [l + smargin, 1 - smargin]),
-        Line('F.SilkS', [l + smargin, 1 - smargin], [l + smargin, 6.35 + smargin]),
+        Line('F.SilkS', [-smargin, -smargin], [l - 1 + sloped_margin, -smargin]),
+        Line('F.SilkS', [l - 1 + sloped_margin, -smargin], [l + smargin, 1 - sloped_margin]),
+        Line('F.SilkS', [l + smargin, 1 - sloped_margin], [l + smargin, 6.35 + smargin]),
         Line('F.SilkS', [l + smargin, 6.35 + smargin], [-smargin, 6.35 + smargin]),
         Line('F.SilkS', [-smargin, 6.35 + smargin], [-smargin, -smargin]),
     ]

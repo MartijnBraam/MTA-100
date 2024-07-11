@@ -33,6 +33,22 @@ class Line(Shape):
             (Symbol('uuid'), uuid),
         )
 
+def make_connected_lines(layer, points, width=0.2, loop=False):
+    if loop:
+        pairs = zip(points, points[1:] + [points[0]])
+    else:
+        pairs = zip(points, points[1:])
+    return [Line(layer, point, next, width) for point, next in pairs]
+
+def make_indexed_rect(layer, start, end):
+    return make_connected_lines('F.Fab',
+        [
+            [0, 0], [l - 1, 0],
+            [l, 1],
+            [l, 6.35],
+            [0, 6.35],
+        ], loop=True, width=0.1,
+    )
 
 class Circle(Shape):
     def __init__(self, layer, center, end, style=None):

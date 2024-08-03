@@ -6,7 +6,6 @@
   (descr "MTA-100 polarized headers, right angle, 6 positions. Part code 640455-6")
   (tags "MTA-100 2.54mm header single row polarized")
   (attr through_hole)
-  (zone_connect 0)
   (
     property
     "Reference"

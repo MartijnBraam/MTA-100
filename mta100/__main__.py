@@ -139,7 +139,6 @@ def make_640455(partno, positions, l, w=None, g=None):
     footprint.append([Symbol('tags'), tags])
     footprint.append(
         [Symbol('attr'), Symbol('through_hole')])
-    footprint.append([Symbol('zone_connect'), 0])
     footprint.append(make_id_label('Reference', 'Ref**', 'F.SilkS', (-2.2225, 9.525)))
 
     cmargin = 0.5

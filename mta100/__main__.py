@@ -89,7 +89,6 @@ def make_640455(partno, positions, l, w=None, g=None):
     footprint.append([Symbol('tags'), tags])
     footprint.append(
         [Symbol('attr'), Symbol('through_hole')])
-    footprint.append([Symbol('zone_connect'), 0])
 
     cmargin = 0.5
     smargin = 0.1

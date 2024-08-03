@@ -6,7 +6,73 @@
   (descr "MTA-100 Headers with retention peg, straight angle, 2 positions. Part code 647050-2")
   (tags "MTA-100 2.54mm header single row")
   (attr through_hole)
-  (zone_connect 0)
+  (
+    property
+    "Reference"
+    "Ref**"
+    (at -0.9525 6.6675 -90)
+    (uuid "d9174c77-8ba4-469a-83de-756dc2a5a63d")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    property
+    "Purpose"
+    "${Purpose}"
+    (at 2.54 7.62 0)
+    (uuid "d7000f2e-1f94-4e3e-9648-2867d78d7753")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1.2 1.2)
+        (thickness 0.2)
+      )
+    )
+  )
+  (
+    property
+    "Purpose Pin2"
+    "${Purpose Pin2}"
+    (at 1.27 -0.3175 90)
+    (uuid "84a916b0-ccd6-4013-999c-432e834401b7")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    property
+    "Purpose Pin1"
+    "${Purpose Pin1}"
+    (at 3.81 -0.3175 90)
+    (uuid "385de479-45c6-450b-846e-e06bbfa6b7b4")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
   (
     fp_line
     (start 0 0)
@@ -83,7 +149,7 @@
   (
     fp_line
     (start -0.1 -0.1)
-    (end 5.18 -0.1)
+    (end 4.099891236737966 -0.1)
     (
       stroke
       (width 0.2)
@@ -94,8 +160,8 @@
   )
   (
     fp_line
-    (start 5.18 -0.1)
-    (end 5.18 6.449999999999999)
+    (start 4.099891236737966 -0.1)
+    (end 5.18 0.9801087632620342)
     (
       stroke
       (width 0.2)
@@ -103,6 +169,18 @@
     )
     (layer "F.SilkS")
     (uuid "9dcaa80e-2a7c-4499-ab07-f72f433cc161")
+  )
+  (
+    fp_line
+    (start 5.18 0.9801087632620342)
+    (end 5.18 6.449999999999999)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "d4187c32-154a-4c4a-af45-bd6e0d553b7f")
   )
   (
     fp_line
@@ -114,7 +192,7 @@
       (type default)
     )
     (layer "F.SilkS")
-    (uuid "d4187c32-154a-4c4a-af45-bd6e0d553b7f")
+    (uuid "59de7b03-7ec6-4c2a-9acc-3ba236ef8160")
   )
   (
     fp_line
@@ -126,7 +204,7 @@
       (type default)
     )
     (layer "F.SilkS")
-    (uuid "59de7b03-7ec6-4c2a-9acc-3ba236ef8160")
+    (uuid "5c898f24-e0a0-4f29-987b-973fa855a8d7")
   )
   (
     fp_rect
@@ -139,7 +217,7 @@
     )
     (fill solid)
     (layer "F.SilkS")
-    (uuid "5c898f24-e0a0-4f29-987b-973fa855a8d7")
+    (uuid "4784c0e8-42ad-4352-b63a-415f21d7f03d")
   )
   (
     pad
@@ -151,7 +229,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "4784c0e8-42ad-4352-b63a-415f21d7f03d")
+    (uuid "a576bc88-4c4a-4caa-acff-526cee096239")
   )
   (
     pad
@@ -163,6 +241,6 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "a576bc88-4c4a-4caa-acff-526cee096239")
+    (uuid "12a4a478-2825-45c9-8dfc-99162a6ddb92")
   )
 )

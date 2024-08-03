@@ -25,8 +25,8 @@
     )
   )
   (
-    property
-    "Purpose Pin4"
+    fp_text
+    user
     "${Purpose Pin4}"
     (at 0.0 -0.9525 90)
     (uuid "3a4f060b-579c-4f59-80fb-28ce73e3940a")
@@ -42,8 +42,8 @@
     )
   )
   (
-    property
-    "Purpose Pin3"
+    fp_text
+    user
     "${Purpose Pin3}"
     (at 2.54 -0.9525 90)
     (uuid "9269cf99-01b8-47b6-8d8a-89528aba5063")
@@ -59,8 +59,8 @@
     )
   )
   (
-    property
-    "Purpose Pin2"
+    fp_text
+    user
     "${Purpose Pin2}"
     (at 5.08 -0.9525 90)
     (uuid "84a916b0-ccd6-4013-999c-432e834401b7")
@@ -76,8 +76,8 @@
     )
   )
   (
-    property
-    "Purpose Pin1"
+    fp_text
+    user
     "${Purpose Pin1}"
     (at 7.620000000000001 -0.9525 90)
     (uuid "385de479-45c6-450b-846e-e06bbfa6b7b4")
@@ -93,8 +93,8 @@
     )
   )
   (
-    property
-    "Purpose"
+    fp_text
+    user
     "${Purpose}"
     (at 3.81 10.4775 0)
     (uuid "d7000f2e-1f94-4e3e-9648-2867d78d7753")

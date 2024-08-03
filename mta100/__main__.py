@@ -84,7 +84,7 @@ def make_647050(partno, positions, l, w=None, g=None):
 
 def make_purpose_pin_label(pin, left, top):
     return [
-        Symbol('property'), f'Purpose Pin{pin}', f'${{Purpose Pin{pin}}}',
+        Symbol('fp_text'), Symbol('user'), f'${{Purpose Pin{pin}}}',
         [Symbol('at'), left, top, 90],
         [Symbol('uuid'), make_uuid(f'purpose_pin_{pin}', 42)],
         [Symbol('layer'), 'F.SilkS'],
@@ -114,7 +114,7 @@ def make_id_label(key, value, layer, pos):
 
 def make_purpose_label(pos):
     return [
-        Symbol('property'), 'Purpose', '${Purpose}',
+        Symbol('fp_text'), Symbol('user'), '${Purpose}',
         [Symbol('at'), pos[0], pos[1], 0],
         [Symbol('uuid'), make_uuid(f'label_purpose', 42)],
         [Symbol('layer'), 'F.SilkS'],

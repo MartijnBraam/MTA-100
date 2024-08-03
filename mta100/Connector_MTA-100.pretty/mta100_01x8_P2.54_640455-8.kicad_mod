@@ -25,8 +25,8 @@
     )
   )
   (
-    property
-    "Purpose Pin8"
+    fp_text
+    user
     "${Purpose Pin8}"
     (at 0.0 -0.9525 90)
     (uuid "8685f678-1e8f-4f72-8a75-5f6ff5849690")
@@ -42,8 +42,8 @@
     )
   )
   (
-    property
-    "Purpose Pin7"
+    fp_text
+    user
     "${Purpose Pin7}"
     (at 2.54 -0.9525 90)
     (uuid "d5b2ac79-1818-471c-8a51-50f32fa78f3f")
@@ -59,8 +59,8 @@
     )
   )
   (
-    property
-    "Purpose Pin6"
+    fp_text
+    user
     "${Purpose Pin6}"
     (at 5.08 -0.9525 90)
     (uuid "d8427b55-0b2a-45e1-af50-13fda87cf5d2")
@@ -76,8 +76,8 @@
     )
   )
   (
-    property
-    "Purpose Pin5"
+    fp_text
+    user
     "${Purpose Pin5}"
     (at 7.620000000000001 -0.9525 90)
     (uuid "7eb1286b-d840-4d2f-b1a8-fb08bc3d34fb")
@@ -93,8 +93,8 @@
     )
   )
   (
-    property
-    "Purpose Pin4"
+    fp_text
+    user
     "${Purpose Pin4}"
     (at 10.16 -0.9525 90)
     (uuid "3a4f060b-579c-4f59-80fb-28ce73e3940a")
@@ -110,8 +110,8 @@
     )
   )
   (
-    property
-    "Purpose Pin3"
+    fp_text
+    user
     "${Purpose Pin3}"
     (at 12.7 -0.9525 90)
     (uuid "9269cf99-01b8-47b6-8d8a-89528aba5063")
@@ -127,8 +127,8 @@
     )
   )
   (
-    property
-    "Purpose Pin2"
+    fp_text
+    user
     "${Purpose Pin2}"
     (at 15.240000000000002 -0.9525 90)
     (uuid "84a916b0-ccd6-4013-999c-432e834401b7")
@@ -144,8 +144,8 @@
     )
   )
   (
-    property
-    "Purpose Pin1"
+    fp_text
+    user
     "${Purpose Pin1}"
     (at 17.78 -0.9525 90)
     (uuid "385de479-45c6-450b-846e-e06bbfa6b7b4")
@@ -161,8 +161,8 @@
     )
   )
   (
-    property
-    "Purpose"
+    fp_text
+    user
     "${Purpose}"
     (at 8.89 10.4775 0)
     (uuid "d7000f2e-1f94-4e3e-9648-2867d78d7753")

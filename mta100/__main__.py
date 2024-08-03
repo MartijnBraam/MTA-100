@@ -8,6 +8,7 @@ from sexpdata import Symbol, dumps
 
 from mta100.shape import Rect, PadRect, Line, Pad, make_connected_lines, make_indexed_rect
 
+add_purpose_labels = True
 
 def make_uuid(name, index):
     h = hmac.new(name.encode(), str(index).encode(), digestmod=sha256)
@@ -26,7 +27,9 @@ def make_647050(partno, positions, l, w=None, g=None):
     footprint.append([Symbol('tags'), tags])
     footprint.append(
         [Symbol('attr'), Symbol('through_hole')])
-    footprint.append([Symbol('zone_connect'), 0])
+    footprint.append(make_id_label('Reference', 'Ref**', 'F.SilkS', (-0.9525, 6.6675)))
+    if add_purpose_labels:
+        footprint.append(make_purpose_label((l * 0.5, 7.62)))
 
     cmargin = 0.5
     smargin = 0.1
@@ -67,6 +70,8 @@ def make_647050(partno, positions, l, w=None, g=None):
     for pos in range(0, positions):
         pin = positions - pos
         left = 1.27 + (pos * 2.54)
+        if add_purpose_labels:
+            footprint.append(make_purpose_pin_label(pin, left, -0.3175))
         shapes.append(Pad(pin, [left, 2.87], 1.85, 1.1))
 
     salt = 0
@@ -76,6 +81,50 @@ def make_647050(partno, positions, l, w=None, g=None):
         footprint.append(graphic)
 
     return name, footprint
+
+def make_purpose_pin_label(pin, left, top):
+    return [
+        Symbol('fp_text'), Symbol('user'), f'${{Purpose Pin{pin}}}',
+        [Symbol('at'), left, top, 90],
+        [Symbol('uuid'), make_uuid(f'purpose_pin_{pin}', 42)],
+        [Symbol('layer'), 'F.SilkS'],
+        [Symbol('effects'),
+            [Symbol('font'),
+                [Symbol('size'), 1, 1],
+                [Symbol('thickness'), 0.15],
+            ],
+            [Symbol('justify'), Symbol('left')],
+        ]
+    ]
+
+def make_id_label(key, value, layer, pos):
+    return [
+        Symbol('property'), key, value,
+        [Symbol('at'), pos[0], pos[1], -90],
+        [Symbol('uuid'), make_uuid(f'label_{key}_{value}', 42)],
+        [Symbol('layer'), layer],
+        [Symbol('effects'),
+            [Symbol('font'),
+                [Symbol('size'), 1, 1],
+                [Symbol('thickness'), 0.15],
+            ],
+            [Symbol('justify'), Symbol('left')],
+        ]
+    ]
+
+def make_purpose_label(pos):
+    return [
+        Symbol('fp_text'), Symbol('user'), '${Purpose}',
+        [Symbol('at'), pos[0], pos[1], 0],
+        [Symbol('uuid'), make_uuid(f'label_purpose', 42)],
+        [Symbol('layer'), 'F.SilkS'],
+        [Symbol('effects'),
+            [Symbol('font'),
+                [Symbol('size'), 1.2, 1.2],
+                [Symbol('thickness'), 0.2],
+            ],
+        ]
+    ]
 
 
 def make_640455(partno, positions, l, w=None, g=None):
@@ -91,6 +140,7 @@ def make_640455(partno, positions, l, w=None, g=None):
     footprint.append(
         [Symbol('attr'), Symbol('through_hole')])
     footprint.append([Symbol('zone_connect'), 0])
+    footprint.append(make_id_label('Reference', 'Ref**', 'F.SilkS', (-2.2225, 9.525)))
 
     cmargin = 0.5
     smargin = 0.1
@@ -129,7 +179,11 @@ def make_640455(partno, positions, l, w=None, g=None):
         shapes.append(Pad(pin, [left, -2.985], 1.85, 1.1))
         if pos == 0:
             origin = shapes[-1].center
+        if add_purpose_labels:
+            footprint.append(make_purpose_pin_label(pin, left - origin[0], -0.9525))
         shapes.append(Line('F.SilkS', [left, -1.8], [left, 0]))
+    if add_purpose_labels:
+        footprint.append(make_purpose_label((l * 0.5 - origin[0], 10.4775)))
 
     salt = 0
     for shape in shapes:

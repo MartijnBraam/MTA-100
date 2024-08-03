@@ -6,7 +6,175 @@
   (descr "MTA-100 Headers with retention peg, straight angle, 8 positions. Part code 647050-8")
   (tags "MTA-100 2.54mm header single row")
   (attr through_hole)
-  (zone_connect 0)
+  (
+    property
+    "Reference"
+    "Ref**"
+    (at -0.9525 6.6675 -90)
+    (uuid "d9174c77-8ba4-469a-83de-756dc2a5a63d")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose}"
+    (at 10.16 7.62 0)
+    (uuid "d7000f2e-1f94-4e3e-9648-2867d78d7753")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1.2 1.2)
+        (thickness 0.2)
+      )
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin8}"
+    (at 1.27 -0.3175 90)
+    (uuid "8685f678-1e8f-4f72-8a75-5f6ff5849690")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin7}"
+    (at 3.81 -0.3175 90)
+    (uuid "d5b2ac79-1818-471c-8a51-50f32fa78f3f")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin6}"
+    (at 6.35 -0.3175 90)
+    (uuid "d8427b55-0b2a-45e1-af50-13fda87cf5d2")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin5}"
+    (at 8.89 -0.3175 90)
+    (uuid "7eb1286b-d840-4d2f-b1a8-fb08bc3d34fb")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin4}"
+    (at 11.43 -0.3175 90)
+    (uuid "3a4f060b-579c-4f59-80fb-28ce73e3940a")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin3}"
+    (at 13.969999999999999 -0.3175 90)
+    (uuid "9269cf99-01b8-47b6-8d8a-89528aba5063")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin2}"
+    (at 16.51 -0.3175 90)
+    (uuid "84a916b0-ccd6-4013-999c-432e834401b7")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin1}"
+    (at 19.05 -0.3175 90)
+    (uuid "385de479-45c6-450b-846e-e06bbfa6b7b4")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
   (
     fp_line
     (start 0 0)
@@ -83,7 +251,7 @@
   (
     fp_line
     (start -0.1 -0.1)
-    (end 20.42 -0.1)
+    (end 19.339891236737966 -0.1)
     (
       stroke
       (width 0.2)
@@ -94,8 +262,8 @@
   )
   (
     fp_line
-    (start 20.42 -0.1)
-    (end 20.42 6.449999999999999)
+    (start 19.339891236737966 -0.1)
+    (end 20.42 0.9801087632620342)
     (
       stroke
       (width 0.2)
@@ -103,6 +271,18 @@
     )
     (layer "F.SilkS")
     (uuid "cb87edab-b2e2-4832-81d9-81473fed50b6")
+  )
+  (
+    fp_line
+    (start 20.42 0.9801087632620342)
+    (end 20.42 6.449999999999999)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "650848ca-4979-4366-95a9-e22486dae815")
   )
   (
     fp_line
@@ -114,7 +294,7 @@
       (type default)
     )
     (layer "F.SilkS")
-    (uuid "650848ca-4979-4366-95a9-e22486dae815")
+    (uuid "bd3a1314-eadd-4f40-a1d3-e932b501abf7")
   )
   (
     fp_line
@@ -126,7 +306,7 @@
       (type default)
     )
     (layer "F.SilkS")
-    (uuid "bd3a1314-eadd-4f40-a1d3-e932b501abf7")
+    (uuid "a35bfb9a-1758-4b9d-9b2a-5769d76d273e")
   )
   (
     fp_rect
@@ -139,7 +319,7 @@
     )
     (fill solid)
     (layer "F.SilkS")
-    (uuid "a35bfb9a-1758-4b9d-9b2a-5769d76d273e")
+    (uuid "de9a4def-c886-4123-82da-5f5c29c1a24b")
   )
   (
     fp_rect
@@ -152,7 +332,7 @@
     )
     (fill solid)
     (layer "F.SilkS")
-    (uuid "de9a4def-c886-4123-82da-5f5c29c1a24b")
+    (uuid "5a04ee69-c598-4f10-9690-36efad7cebdf")
   )
   (
     pad
@@ -164,7 +344,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "5a04ee69-c598-4f10-9690-36efad7cebdf")
+    (uuid "54a58edf-7591-421f-a1e5-461104433ccb")
   )
   (
     pad
@@ -176,7 +356,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "54a58edf-7591-421f-a1e5-461104433ccb")
+    (uuid "fe7c8081-1185-4e89-bc84-e06d1fe0abc6")
   )
   (
     pad
@@ -188,7 +368,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "fe7c8081-1185-4e89-bc84-e06d1fe0abc6")
+    (uuid "5222fff4-90e8-430f-bf9b-127f1bacef88")
   )
   (
     pad
@@ -200,7 +380,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "5222fff4-90e8-430f-bf9b-127f1bacef88")
+    (uuid "d1efc004-7262-4c02-8c46-23ca71c83c69")
   )
   (
     pad
@@ -212,7 +392,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "d1efc004-7262-4c02-8c46-23ca71c83c69")
+    (uuid "2df7ff69-2196-4f39-b160-ee511250e3a3")
   )
   (
     pad
@@ -224,7 +404,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "2df7ff69-2196-4f39-b160-ee511250e3a3")
+    (uuid "eb75ecee-0b57-462b-9eaf-fe880d97a0ff")
   )
   (
     pad
@@ -236,7 +416,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "eb75ecee-0b57-462b-9eaf-fe880d97a0ff")
+    (uuid "2789eed4-119e-47cf-bc62-3308c82c3bfd")
   )
   (
     pad
@@ -248,6 +428,6 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "2789eed4-119e-47cf-bc62-3308c82c3bfd")
+    (uuid "8581d55d-499f-4693-bbaf-311704ab6200")
   )
 )

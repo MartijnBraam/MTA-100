@@ -6,7 +6,124 @@
   (descr "MTA-100 Headers with retention peg, straight angle, 5 positions. Part code 647050-5")
   (tags "MTA-100 2.54mm header single row")
   (attr through_hole)
-  (zone_connect 0)
+  (
+    property
+    "Reference"
+    "Ref**"
+    (at -0.9525 6.6675 -90)
+    (uuid "d9174c77-8ba4-469a-83de-756dc2a5a63d")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose}"
+    (at 6.35 7.62 0)
+    (uuid "d7000f2e-1f94-4e3e-9648-2867d78d7753")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1.2 1.2)
+        (thickness 0.2)
+      )
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin5}"
+    (at 1.27 -0.3175 90)
+    (uuid "7eb1286b-d840-4d2f-b1a8-fb08bc3d34fb")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin4}"
+    (at 3.81 -0.3175 90)
+    (uuid "3a4f060b-579c-4f59-80fb-28ce73e3940a")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin3}"
+    (at 6.35 -0.3175 90)
+    (uuid "9269cf99-01b8-47b6-8d8a-89528aba5063")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin2}"
+    (at 8.89 -0.3175 90)
+    (uuid "84a916b0-ccd6-4013-999c-432e834401b7")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
+  (
+    fp_text
+    user
+    "${Purpose Pin1}"
+    (at 11.43 -0.3175 90)
+    (uuid "385de479-45c6-450b-846e-e06bbfa6b7b4")
+    (layer "F.SilkS")
+    (
+      effects
+      (
+        font
+        (size 1 1)
+        (thickness 0.15)
+      )
+      (justify left)
+    )
+  )
   (
     fp_line
     (start 0 0)
@@ -83,7 +200,7 @@
   (
     fp_line
     (start -0.1 -0.1)
-    (end 12.799999999999999 -0.1)
+    (end 11.719891236737965 -0.1)
     (
       stroke
       (width 0.2)
@@ -94,8 +211,8 @@
   )
   (
     fp_line
-    (start 12.799999999999999 -0.1)
-    (end 12.799999999999999 6.449999999999999)
+    (start 11.719891236737965 -0.1)
+    (end 12.799999999999999 0.9801087632620342)
     (
       stroke
       (width 0.2)
@@ -103,6 +220,18 @@
     )
     (layer "F.SilkS")
     (uuid "6ccfcdb8-40fc-4635-b604-a5eda6bbb3ac")
+  )
+  (
+    fp_line
+    (start 12.799999999999999 0.9801087632620342)
+    (end 12.799999999999999 6.449999999999999)
+    (
+      stroke
+      (width 0.2)
+      (type default)
+    )
+    (layer "F.SilkS")
+    (uuid "7b507f4f-09b1-41a2-98d9-4f76c0f4b3cd")
   )
   (
     fp_line
@@ -114,7 +243,7 @@
       (type default)
     )
     (layer "F.SilkS")
-    (uuid "7b507f4f-09b1-41a2-98d9-4f76c0f4b3cd")
+    (uuid "981344f4-799a-4eb9-a8a7-0a238f8c693f")
   )
   (
     fp_line
@@ -126,7 +255,7 @@
       (type default)
     )
     (layer "F.SilkS")
-    (uuid "981344f4-799a-4eb9-a8a7-0a238f8c693f")
+    (uuid "ac1798ae-0543-4bb7-be5d-7e6e6f0a30e4")
   )
   (
     fp_rect
@@ -139,7 +268,7 @@
     )
     (fill solid)
     (layer "F.SilkS")
-    (uuid "ac1798ae-0543-4bb7-be5d-7e6e6f0a30e4")
+    (uuid "b90cc98f-76ba-4315-bdbd-8e1c53abe74a")
   )
   (
     pad
@@ -151,7 +280,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "b90cc98f-76ba-4315-bdbd-8e1c53abe74a")
+    (uuid "6d704cd2-5959-4cb6-aba8-1a1737bc1190")
   )
   (
     pad
@@ -163,7 +292,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "6d704cd2-5959-4cb6-aba8-1a1737bc1190")
+    (uuid "523dc3a0-8b22-4932-8292-491c70aa625c")
   )
   (
     pad
@@ -175,7 +304,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "523dc3a0-8b22-4932-8292-491c70aa625c")
+    (uuid "990f15fd-0a49-4f1e-84f5-cee9f9f7f77d")
   )
   (
     pad
@@ -187,7 +316,7 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "990f15fd-0a49-4f1e-84f5-cee9f9f7f77d")
+    (uuid "020f4263-04b0-495d-8fed-18f84498cbb1")
   )
   (
     pad
@@ -199,6 +328,6 @@
     (drill 1.1)
     (layers "*.Cu" "*.Mask")
     (remove_unused_layers no)
-    (uuid "020f4263-04b0-495d-8fed-18f84498cbb1")
+    (uuid "43f0a61d-b73d-4e56-b2d7-1c3ab7b0c654")
   )
 )

@@ -154,7 +154,7 @@ def make_640455(partno, positions, l, w=None, g=None):
     ) + [
         Rect('F.CrtYd', [-cmargin, -moffset - cmargin], [l + cmargin, ph + cmargin - (moffset / 2)], width=0.05),
     ] + make_connected_lines(
-        'F.SilkS', [
+        'F.Fab', [
             [-smargin, -smargin],
             [l - 1 + sloped_margin, -smargin],
             [l + smargin, 1 - sloped_margin],
@@ -166,11 +166,11 @@ def make_640455(partno, positions, l, w=None, g=None):
     th = 2.87 - 0.64 - (0.64 / 2)
     if g is None:
         # Single tab
-        shapes.append(Rect('F.SilkS', [1.27, -smargin], [l - 1.27, th - smargin], filled=True))
+        shapes.append(Rect('F.Fab', [1.27, -smargin], [l - 1.27, th - smargin], filled=True))
     elif w is None:
         # Double tab
-        shapes.append(Rect('F.SilkS', [1.27, -smargin], [l / 2 - (g / 2), th - smargin], filled=True))
-        shapes.append(Rect('F.SilkS', [l / 2 + (g / 2), -smargin], [l - 1.27, th - smargin], filled=True))
+        shapes.append(Rect('F.Fab', [1.27, -smargin], [l / 2 - (g / 2), th - smargin], filled=True))
+        shapes.append(Rect('F.Fab', [l / 2 + (g / 2), -smargin], [l - 1.27, th - smargin], filled=True))
 
     for pos in range(0, positions):
         pin = positions - pos

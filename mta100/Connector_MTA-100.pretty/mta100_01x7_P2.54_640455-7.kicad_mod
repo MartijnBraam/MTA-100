@@ -240,7 +240,7 @@
       (width 0.2)
       (type default)
     )
-    (layer "F.SilkS")
+    (layer "F.Fab")
     (uuid "a3988065-b140-454a-ac78-8a96ac6bc437")
   )
   (
@@ -252,7 +252,7 @@
       (width 0.2)
       (type default)
     )
-    (layer "F.SilkS")
+    (layer "F.Fab")
     (uuid "e2711924-02de-4eac-a2ee-5cfa5a8cdc89")
   )
   (
@@ -264,7 +264,7 @@
       (width 0.2)
       (type default)
     )
-    (layer "F.SilkS")
+    (layer "F.Fab")
     (uuid "fb3506e8-c454-4f1c-a00f-f6b4057aedcc")
   )
   (
@@ -276,7 +276,7 @@
       (width 0.2)
       (type default)
     )
-    (layer "F.SilkS")
+    (layer "F.Fab")
     (uuid "8f2248c3-7bb5-4208-83b4-cc348490d8b9")
   )
   (
@@ -288,7 +288,7 @@
       (width 0.2)
       (type default)
     )
-    (layer "F.SilkS")
+    (layer "F.Fab")
     (uuid "5d263739-57fc-46b6-8ded-f33f881d260f")
   )
   (
@@ -301,7 +301,7 @@
       (type default)
     )
     (fill solid)
-    (layer "F.SilkS")
+    (layer "F.Fab")
     (uuid "87881b21-0e97-4ed3-bbd7-0562966570b9")
   )
   (
